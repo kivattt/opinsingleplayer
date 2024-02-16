@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io/' }
+    }
+    dependencies {
+        classpath('com.github.Fox2Code.FoxLoader:dev:1.2.38')
+    }
+}
+
+apply plugin: 'foxloader.dev'
+
+version '1.0.0'
+
+foxloader {
+    // forceReload = true
+    modId = "opinsingleplayer"
+    modName = "OpInSingleplayer"
+    modVersion = project.version
+    modDesc = "Gives you operator/cheats in all singleplayer worlds"
+    modWebsite = "https://github.com/kivattt/opinsingleplayer"
+    clientMod = "com.kiva.opinsingleplayer.OpInSingleplayerClient"
+}
